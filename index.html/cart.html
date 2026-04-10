@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saori Kido | Carrinho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="imgs/saori kido logo.png" alt="Logo Saori Kido">
+          <span class="brand-text">Saori Kido</span>
+        </a>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="news.html">News</a>
+          <a href="store.html" class="is-active">Store</a>
+          <a href="discography.html">Discography</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-inner reveal">
+          <p class="breadcrumb">Home / Store / Carrinho</p>
+          <h1>Your Cart</h1>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container cart-layout">
+          <div class="cart-list" id="cart-list"></div>
+          <aside class="cart-summary panel reveal">
+            <p>Total:</p>
+            <p class="detail-price" id="cart-total">R$0,00</p>
+            <div class="hero-actions cart-actions">
+              <a class="button buy-button" id="cart-checkout-button" href="checkout.html">Place an order</a>
+              <a class="button button-secondary" href="store-albums.html">Continue shopping</a>
+              <button class="text-link cart-clear-button" id="empty-cart-button" type="button">Empty cart</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
