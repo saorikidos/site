@@ -1,7 +1,28 @@
 const page = document.documentElement.dataset.page;
 const currentPath = window.location.pathname.toLowerCase();
 
+if (!document.querySelector('link[rel="icon"]')) {
+  const favicon = document.createElement("link");
+  favicon.rel = "icon";
+  favicon.type = "image/png";
+  favicon.href = "imgs/saori kido logo.png";
+  document.head.appendChild(favicon);
+}
+
 document.querySelectorAll(".site-nav").forEach((nav) => {
+  if (!nav.querySelector('[data-nav="about"]')) {
+    const aboutLink = document.createElement("a");
+    aboutLink.href = "about.html";
+    aboutLink.dataset.nav = "about";
+    aboutLink.textContent = "Sobre";
+    const newsLink = nav.querySelector('[data-nav="news"]');
+    if (newsLink) {
+      nav.insertBefore(aboutLink, newsLink);
+    } else {
+      nav.appendChild(aboutLink);
+    }
+  }
+
   if (!nav.querySelector('[data-nav="cart"]')) {
     const cartLink = document.createElement("a");
     cartLink.href = "cart.html";
@@ -70,6 +91,74 @@ filterButtons.forEach((button) => {
     });
   });
 });
+
+function setupMobileDiscographyReadMore() {
+  if (window.innerWidth > 760) return;
+
+  document.querySelectorAll(".release-card").forEach((card) => {
+    const description = Array.from(card.querySelectorAll("p")).find((item) => !item.classList.contains("eyebrow"));
+    if (!description || card.querySelector(".release-read-more")) return;
+
+    description.classList.add("release-description");
+    const toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "release-read-more";
+    toggle.textContent = "Ler mais";
+
+    toggle.addEventListener("click", () => {
+      const expanded = description.classList.toggle("is-expanded");
+      toggle.textContent = expanded ? "Ler menos" : "Ler mais";
+    });
+
+    const actions = card.querySelector(".release-card-actions");
+    if (actions) {
+      card.insertBefore(toggle, actions);
+    } else {
+      card.appendChild(toggle);
+    }
+  });
+}
+
+function setupCookieBanner() {
+  const banner = document.getElementById("cookie-banner");
+  if (!banner) return;
+
+  const COOKIE_KEY = "saori_cookie_banner_closed";
+  if (localStorage.getItem(COOKIE_KEY) === "1") {
+    banner.classList.add("is-hidden");
+    return;
+  }
+
+  banner.querySelectorAll(".cookie-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      localStorage.setItem(COOKIE_KEY, "1");
+      banner.classList.add("is-hidden");
+    });
+  });
+}
+
+function setupCheckoutTabs() {
+  const steps = document.querySelectorAll("[data-checkout-step]");
+  const panels = document.querySelectorAll("[data-checkout-panel]");
+  if (!steps.length || !panels.length) return;
+
+  const openCheckoutStep = (step) => {
+    steps.forEach((item) => item.classList.toggle("is-active", item.dataset.checkoutStep === step));
+    panels.forEach((item) => item.classList.toggle("is-active", item.dataset.checkoutPanel === step));
+  };
+
+  steps.forEach((step) => {
+    step.addEventListener("click", () => openCheckoutStep(step.dataset.checkoutStep));
+  });
+
+  document.querySelectorAll("[data-checkout-next]").forEach((button) => {
+    button.addEventListener("click", () => openCheckoutStep(button.dataset.checkoutNext));
+  });
+
+  document.querySelectorAll("[data-checkout-prev]").forEach((button) => {
+    button.addEventListener("click", () => openCheckoutStep(button.dataset.checkoutPrev));
+  });
+}
 
 const CART_KEY = "saori_kido_cart";
 
@@ -238,3 +327,6 @@ document.querySelectorAll("[data-cart-action]").forEach((button) => {
 renderCartPage();
 renderCheckoutPage();
 updateCartNavCount();
+setupMobileDiscographyReadMore();
+setupCheckoutTabs();
+setupCookieBanner();

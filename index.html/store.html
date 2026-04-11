@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saori Kido | Store</title>
-  <meta name="description" content="Loja interna de Saori Kido com categorias e paginas de produtos.">
+  <meta name="description" content="Loja oficial conceitual de Saori Kido com colecoes, eras e categorias.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
@@ -32,40 +32,123 @@
     </header>
 
     <main>
-      <section class="page-hero">
+      <section class="page-hero store-page-hero">
         <div class="container page-hero-inner reveal">
-          <p class="kicker">Store</p>
-          <h1>Escolha uma categoria e abra os produtos.</h1>
-          <p class="lead">Explore nossas categorias e descubra produtos feitos para você.</p>
+          <p class="kicker">Official store</p>
+          <h1>Loja oficial de Saori Kido</h1>
+          <p class="lead">Coleções em destaque, lançamentos recentes e uma curadoria que conecta música, merch e identidade visual.</p>
+        </div>
+      </section>
+
+      <section class="section store-quicklinks-section">
+        <div class="container">
+          <div class="store-quicklinks reveal">
+            <a href="#new-arrivals">Novos produtos</a>
+            <a href="#shop-eras">Compre por era</a>
+            <a href="cart.html">Carrinho</a>
+          </div>
         </div>
       </section>
 
       <section class="section">
-        <div class="container card-grid card-grid-3">
-          <a class="store-feature reveal feature-link" href="store-albums.html" style="--card-image: url('imgs/sxoxo.webp');">
-            <div class="feature-overlay"></div>
-            <div class="feature-copy">
-              <p class="eyebrow">Categoria</p>
-              <h2>Albums</h2>
-              <p>Versoes, vinis, CDs especiais e itens da era S,XOXO.</p>
+        <div class="container store-editorial-grid">
+          <a class="store-editorial-feature reveal" href="store-albums.html" style="--editorial-image: url('imgs/sxoxo.webp');">
+            <div class="store-editorial-overlay"></div>
+            <div class="store-editorial-copy">
+              <p class="eyebrow">Coleção em destaque</p>
+              <h2>Álbuns</h2>
+              <p>Vinis, edições deluxe e o lado mais colecionável da cada era.</p>
+              <span class="store-inline-link">Compre agora</span>
             </div>
           </a>
-          <a class="store-feature reveal feature-link" href="store-beauty.html" style="--card-image: url('imgs/hidratação.png');">
-            <div class="feature-overlay"></div>
-            <div class="feature-copy">
-              <p class="eyebrow">Categoria</p>
-              <h2>Cosmeticos</h2>
-              <p>Gloss, brilho e kits inspirados nas fases mais glam de Saori.</p>
+
+          <div class="store-mini-stack">
+            <a class="store-mini-card reveal" href="store-merch.html" style="--mini-image: url('imgs/lightstick.png');">
+              <div class="store-editorial-overlay"></div>
+              <div class="store-mini-copy">
+                <p class="eyebrow">Merch Oficial</p>
+                <h3>Produtos oficiais</h3>
+              </div>
+            </a>
+            <a class="store-mini-card reveal" href="store-beauty.html" style="--mini-image: url('imgs/hidratação.png');">
+              <div class="store-editorial-overlay"></div>
+              <div class="store-mini-copy">
+                <p class="eyebrow">Cosméticos</p>
+                <h3>Produtos de beleza</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="new-arrivals">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="kicker">Novos produtos</p>
+              <h2>Produtos novos e em destaque</h2>
             </div>
-          </a>
-          <a class="store-feature reveal feature-link" href="store-merch.html" style="--card-image: url('imgs/lightstick.png');">
-            <div class="feature-overlay"></div>
-            <div class="feature-copy">
-              <p class="eyebrow">Categoria</p>
-              <h2>Merch Oficial</h2>
-              <p>Camisetas, itens visuais e pecas conceituais do universo NewMfx.</p>
+            <a class="text-link" href="all-products.html">Veja o catálogo completo</a>
+          </div>
+
+          <div class="store-arrivals-grid">
+            <a class="store-arrival-card panel reveal" href="produtoum.html">
+              <div class="catalog-thumb">
+                <span class="catalog-badge">NEW</span>
+                <img src="imgs/sxoxo.webp" alt="S,XOXO Vinyl">
+              </div>
+              <p class="eyebrow">Music</p>
+              <h3>S,XOXO Vinyl</h3>
+              <p>Deluxe edition com acabamento de colecionador e visual de era oficial.</p>
+              <span class="price">R$169,99</span>
+            </a>
+
+            <a class="store-arrival-card panel reveal" href="merch1.html">
+              <div class="catalog-thumb">
+                <span class="catalog-badge">NEW</span>
+                <img src="imgs/saori funko.png" alt="Funko Pop especial da Saori">
+              </div>
+              <p class="eyebrow">Merch</p>
+              <h3>Funko Pop especial</h3>
+              <p>Uma peca de colecionador montada como item de fan drop oficial.</p>
+              <span class="price">R$229,99</span>
+            </a>
+
+            <a class="store-arrival-card panel reveal" href="Beauty1.html">
+              <div class="catalog-thumb">
+                <span class="catalog-badge">NEW</span>
+                <img src="imgs/hidratação.png" alt="Tolete de Hidratação">
+              </div>
+              <p class="eyebrow">Beauty</p>
+              <h3>Tolete de Hidratação</h3>
+              <p>Um kit pensado para hidratação completa e equilibrada.</p>
+              <span class="price">R$29,99</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="shop-eras">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="kicker">Compre por era</p>
+              <h2>Entre pelo conceito e nao so pela categoria.</h2>
             </div>
-          </a>
+            <a class="text-link" href="discography.html">Veja a discografia</a>
+          </div>
+
+          <div class="era-grid">
+            <a class="era-card reveal" href="store-albums.html" style="--era-image: url('imgs/born-kido.jpg');">
+              <span>Born Kido</span>
+            </a>
+            <a class="era-card reveal" href="store-albums.html" style="--era-image: url('imgs/S,XOXO-Magic-NewMfx-Edition.jpg');">
+              <span>S,XOXO</span>
+            </a>
+            <a class="era-card reveal" href="store-merch.html" style="--era-image: url('imgs/The-NewMfx-Festival-Repackage-Superfart.jpg');">
+              <span>Superfart</span>
+            </a>
+          </div>
         </div>
       </section>
     </main>

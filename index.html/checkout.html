@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en" data-page="checkout">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +18,10 @@
           <span class="brand-text">Saori Kido</span>
         </a>
         <nav class="site-nav">
-          <a href="index.html">Home</a>
-          <a href="news.html">News</a>
-          <a href="store.html" class="is-active">Store</a>
-          <a href="discography.html">Discography</a>
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="news.html" data-nav="news">News</a>
+          <a href="store.html" data-nav="store" class="is-active">Store</a>
+          <a href="discography.html" data-nav="discography">Discography</a>
         </nav>
       </div>
     </header>
@@ -36,25 +36,84 @@
         <div class="container checkout-layout">
           <div class="checkout-form panel reveal">
             <div class="checkout-steps">
-              <span class="is-active">Enter your info</span>
-              <span>Delivery options</span>
-              <span>Payment</span>
+              <button class="checkout-step is-active" type="button" data-checkout-step="info">Enter your info</button>
+              <button class="checkout-step" type="button" data-checkout-step="delivery">Delivery options</button>
+              <button class="checkout-step" type="button" data-checkout-step="payment">Payment</button>
             </div>
-            <div class="form-grid">
-              <input type="email" placeholder="Email *">
-              <input type="text" placeholder="First name *">
-              <input type="text" placeholder="Last name *">
-              <input type="text" placeholder="País">
-              <input type="text" placeholder="Cidade">
-              <input type="text" placeholder="Address *">
-              <input type="text" placeholder="City *">
+
+            <div class="checkout-panel is-active" data-checkout-panel="info">
+              <div class="form-grid">
+                <input type="email" placeholder="Email *">
+                <input type="text" placeholder="First name *">
+                <input type="text" placeholder="Last name *">
+                <input type="text" placeholder="Country">
+                <input type="text" placeholder="State">
+                <input type="text" placeholder="Address *">
+                <input type="text" placeholder="City *">
+              </div>
+              <label class="check-row">
+                <input type="checkbox" checked>
+                <span>My shipping and billing address is the same</span>
+              </label>
+              <div class="hero-actions">
+                <button class="button buy-button" type="button" data-checkout-next="delivery">Save and continue</button>
+              </div>
             </div>
-            <label class="check-row">
-              <input type="checkbox" checked>
-              <span>My shipping and billing address is the same</span>
-            </label>
-            <a class="button buy-button" href="#">Save and continue</a>
+
+            <div class="checkout-panel" data-checkout-panel="delivery">
+              <div class="checkout-option-list">
+                <label class="checkout-option">
+                  <input type="radio" name="delivery" checked>
+                  <div>
+                    <strong>Standard delivery</strong>
+                    <p>3 to 5 business days. Free shipping included.</p>
+                  </div>
+                </label>
+                <label class="checkout-option">
+                  <input type="radio" name="delivery">
+                  <div>
+                    <strong>Express delivery</strong>
+                    <p>1 to 2 business days. Estimated fee: R$24,90.</p>
+                  </div>
+                </label>
+              </div>
+              <div class="hero-actions">
+                <button class="button button-secondary" type="button" data-checkout-prev="info">Back</button>
+                <button class="button buy-button" type="button" data-checkout-next="payment">Continue to payment</button>
+              </div>
+            </div>
+
+            <div class="checkout-panel" data-checkout-panel="payment">
+              <div class="checkout-option-list">
+                <label class="checkout-option">
+                  <input type="radio" name="payment" checked>
+                  <div>
+                    <strong>Credit card</strong>
+                    <p>Visa, Mastercard, Elo and American Express.</p>
+                  </div>
+                </label>
+                <label class="checkout-option">
+                  <input type="radio" name="payment">
+                  <div>
+                    <strong>Pix</strong>
+                    <p>Instant confirmation after payment.</p>
+                  </div>
+                </label>
+                <label class="checkout-option">
+                  <input type="radio" name="payment">
+                  <div>
+                    <strong>Bank slip</strong>
+                    <p>Confirmation may take up to 3 business days.</p>
+                  </div>
+                </label>
+              </div>
+              <div class="hero-actions">
+                <button class="button button-secondary" type="button" data-checkout-prev="delivery">Back</button>
+                <a class="button buy-button" href="cart.html">Place order</a>
+              </div>
+            </div>
           </div>
+
           <aside class="checkout-summary panel reveal">
             <div id="checkout-items"></div>
             <div class="checkout-total">
