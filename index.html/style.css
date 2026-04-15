@@ -37,6 +37,72 @@ body::before {
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.08));
 }
 
+html:not([data-page="home"]) {
+  --surface: rgba(9, 22, 40, 0.74);
+  --text: #f4f8ff;
+  --muted: rgba(255, 255, 255, 0.78);
+  --line: rgba(255, 255, 255, 0.14);
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+}
+
+html:not([data-page="home"]) body {
+  background:
+    radial-gradient(circle at top left, rgba(60, 140, 255, 0.20), transparent 24%),
+    radial-gradient(circle at 82% 8%, rgba(109, 176, 255, 0.16), transparent 20%),
+    radial-gradient(circle at 50% 0%, rgba(33, 92, 255, 0.12), transparent 28%),
+    linear-gradient(180deg, #071220 0%, #0a1a31 44%, #0d223d 100%);
+}
+
+html:not([data-page="home"]) body::before {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+html:not([data-page="home"]) .site-header {
+  background: linear-gradient(180deg, rgba(7, 18, 32, 0.94), rgba(10, 26, 49, 0.88));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+html:not([data-page="home"]) .site-nav a:hover,
+html:not([data-page="home"]) .site-nav a.is-active {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(109, 176, 255, 0.16));
+  color: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+html:not([data-page="home"]) .menu-toggle {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+html:not([data-page="home"]) .menu-toggle span {
+  background: #ffffff;
+}
+
+html:not([data-page="home"]) .panel,
+html:not([data-page="home"]) .spotlight-card,
+html:not([data-page="home"]) .player-ui,
+html:not([data-page="home"]) .player-screen,
+html:not([data-page="home"]) .cta-panel,
+html:not([data-page="home"]) .store-feature,
+html:not([data-page="home"]) .product-card,
+html:not([data-page="home"]) .metric,
+html:not([data-page="home"]) .cookie-banner {
+  background:
+    linear-gradient(180deg, rgba(10, 26, 49, 0.82), rgba(10, 26, 49, 0.64)),
+    linear-gradient(135deg, rgba(109, 176, 255, 0.08), rgba(255, 255, 255, 0.02));
+}
+
+html:not([data-page="home"]) .panel::before,
+html:not([data-page="home"]) .player-ui::before,
+html:not([data-page="home"]) .player-screen::before,
+html:not([data-page="home"]) .cta-panel::before,
+html:not([data-page="home"]) .product-card::before,
+html:not([data-page="home"]) .store-feature::before,
+html:not([data-page="home"]) .spotlight-card::before {
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.08), transparent 34%);
+}
+
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
@@ -1422,7 +1488,7 @@ h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.22);
-    background-image: url("imgs/3 barrinhas png.png");
+    background-image: url("imgs//3barrinhas.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 22px 22px;
@@ -1957,5 +2023,285 @@ h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
 
   .site-nav.site-nav-home a {
     border-radius: 18px !important;
+  }
+}
+
+html:not([data-page="home"]) body {
+  background:
+    radial-gradient(circle at top left, rgba(82, 145, 255, 0.22), transparent 24%),
+    radial-gradient(circle at 82% 8%, rgba(120, 177, 255, 0.18), transparent 20%),
+    radial-gradient(circle at 50% 0%, rgba(52, 112, 224, 0.14), transparent 28%),
+    linear-gradient(180deg, #0b1830 0%, #102442 44%, #15315a 100%);
+}
+
+html:not([data-page="home"]) .site-header {
+  background: linear-gradient(180deg, rgba(11, 24, 48, 0.94), rgba(16, 36, 66, 0.88));
+}
+
+html:not([data-page="home"]) .panel,
+html:not([data-page="home"]) .news-feature,
+html:not([data-page="home"]) .news-side-card,
+html:not([data-page="home"]) .news-story-card,
+html:not([data-page="home"]) .timeline-card .panel,
+html:not([data-page="home"]) .release-card,
+html:not([data-page="home"]) .catalog-card,
+html:not([data-page="home"]) .catalog-sidebar,
+html:not([data-page="home"]) .product-card,
+html:not([data-page="home"]) .detail-image,
+html:not([data-page="home"]) .detail-copy,
+html:not([data-page="home"]) .article-body,
+html:not([data-page="home"]) .cart-summary,
+html:not([data-page="home"]) .cart-item,
+html:not([data-page="home"]) .checkout-form,
+html:not([data-page="home"]) .checkout-summary,
+html:not([data-page="home"]) .timeline-card .panel,
+html:not([data-page="home"]) .store-arrival-card,
+html:not([data-page="home"]) .store-feature,
+html:not([data-page="home"]) .cta-panel,
+html:not([data-page="home"]) .player-ui,
+html:not([data-page="home"]) .player-screen,
+html:not([data-page="home"]) .metric,
+html:not([data-page="home"]) .cookie-banner {
+  background:
+    radial-gradient(circle at top right, rgba(109, 176, 255, 0.12), transparent 28%) !important,
+    linear-gradient(180deg, rgba(16, 36, 66, 0.90), rgba(14, 31, 56, 0.84)) !important,
+    linear-gradient(135deg, rgba(109, 176, 255, 0.06), rgba(255, 255, 255, 0.02)) !important;
+  box-shadow: 0 22px 46px rgba(3, 10, 24, 0.18) !important;
+}
+
+html:not([data-page="home"]) .panel::before,
+html:not([data-page="home"]) .player-ui::before,
+html:not([data-page="home"]) .player-screen::before,
+html:not([data-page="home"]) .cta-panel::before,
+html:not([data-page="home"]) .product-card::before,
+html:not([data-page="home"]) .store-feature::before,
+html:not([data-page="home"]) .spotlight-card::before {
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.05), transparent 34%) !important;
+}
+
+html:not([data-page="home"]) .button-primary,
+html:not([data-page="home"]) .checkout-steps .is-active,
+html:not([data-page="home"]) .track-chip.is-active,
+html:not([data-page="home"]) .filter-chip.is-active,
+html:not([data-page="home"]) .cookie-accept {
+  background: linear-gradient(135deg, #4b86e8, #2a6df0) !important;
+  border-color: rgba(104, 161, 255, 0.55) !important;
+  color: #f7fbff !important;
+  box-shadow: 0 14px 28px rgba(42, 109, 240, 0.24) !important;
+}
+
+html:not([data-page="home"]) .button-secondary,
+html:not([data-page="home"]) .filter-chip,
+html:not([data-page="home"]) .track-chip,
+html:not([data-page="home"]) .checkout-step,
+html:not([data-page="home"]) .qty-btn,
+html:not([data-page="home"]) .cookie-button:not(.cookie-accept),
+html:not([data-page="home"]) .checkout-option {
+  background: rgba(201, 210, 225, 0.78) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #f2f6fc !important;
+}
+
+html:not([data-page="home"]) .checkout-option input,
+html:not([data-page="home"]) .checkout-option strong,
+html:not([data-page="home"]) .checkout-option p,
+html:not([data-page="home"]) .checkout-option label {
+  color: #f2f6fc !important;
+}
+
+html:not([data-page="home"]) .site-footer {
+  background: linear-gradient(180deg, rgba(15, 34, 61, 0.96), rgba(18, 40, 70, 0.92)) !important;
+}
+
+html:not([data-page="home"]) .site-footer,
+html:not([data-page="home"]) .site-footer .footer-title,
+html:not([data-page="home"]) .site-footer p,
+html:not([data-page="home"]) .site-footer a {
+  color: #eef4ff !important;
+}
+
+html:not([data-page="home"]) .site-footer .footer-wrap {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+html[data-page="checkout"] .checkout-steps {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  padding: 6px !important;
+  border-radius: 26px !important;
+  background: rgba(8, 19, 36, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+  overflow: visible !important;
+}
+
+html[data-page="checkout"] .checkout-step {
+  min-height: 62px !important;
+  padding: 16px 18px !important;
+  border-radius: 22px !important;
+  background: rgba(198, 207, 222, 0.82) !important;
+  color: #f3f7ff !important;
+  box-shadow: none !important;
+}
+
+html[data-page="checkout"] .checkout-steps .checkout-step.is-active {
+  background: linear-gradient(135deg, #4f88ea, #2e70f0) !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 24px rgba(42, 109, 240, 0.24) !important;
+}
+
+html[data-page="checkout"] .checkout-panel .hero-actions {
+  justify-content: flex-start !important;
+  gap: 16px !important;
+  margin-top: 20px !important;
+}
+
+html[data-page="checkout"] .checkout-panel .button {
+  min-width: 0 !important;
+}
+
+html[data-page="checkout"] .checkout-panel .button-secondary {
+  background: rgba(194, 203, 218, 0.84) !important;
+  color: #eef4ff !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-page="checkout"] .checkout-panel .buy-button,
+html[data-page="checkout"] .checkout-panel .button-primary {
+  background: linear-gradient(180deg, rgba(40, 66, 108, 0.98), rgba(29, 51, 86, 0.96)) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(120, 158, 220, 0.24) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 10px 24px rgba(3, 10, 24, 0.14) !important;
+}
+
+html[data-page="checkout"] .checkout-option {
+  padding: 18px 20px !important;
+  border-radius: 24px !important;
+  background: rgba(182, 192, 210, 0.88) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-page="checkout"] .checkout-option strong,
+html[data-page="checkout"] .checkout-option p,
+html[data-page="checkout"] .checkout-option label,
+html[data-page="checkout"] .checkout-option input {
+  color: #f4f8ff !important;
+}
+
+html[data-page="checkout"] .form-grid input {
+  background: linear-gradient(180deg, rgba(30, 52, 86, 0.94), rgba(22, 41, 71, 0.92)) !important;
+  color: #eef4ff !important;
+  border: 1px solid rgba(120, 158, 220, 0.18) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+}
+
+html[data-page="checkout"] .form-grid input::placeholder {
+  color: rgba(238, 244, 255, 0.72) !important;
+}
+
+html[data-page="checkout"] .check-row {
+  color: #eef4ff !important;
+}
+
+html:not([data-page="home"]) .button-secondary,
+html:not([data-page="home"]) .filter-chip,
+html:not([data-page="home"]) .track-chip,
+html:not([data-page="home"]) .qty-btn,
+html:not([data-page="home"]) .cookie-button:not(.cookie-accept) {
+  background: rgba(190, 201, 219, 0.78) !important;
+  color: #eef4ff !important;
+}
+
+html:not([data-page="home"]) .button-secondary,
+html:not([data-page="home"]) .filter-chip,
+html:not([data-page="home"]) .track-chip,
+html:not([data-page="home"]) .checkout-step:not(.is-active),
+html:not([data-page="home"]) .qty-btn,
+html:not([data-page="home"]) .cookie-button:not(.cookie-accept),
+html:not([data-page="home"]) .product-button:not(.button-primary):not(.buy-button),
+html:not([data-page="home"]) .release-card .button-secondary,
+html:not([data-page="home"]) .discography-grid-full .button-secondary,
+html:not([data-page="home"]) .filter-bar .filter-chip,
+html:not([data-page="home"]) .track-list .track-chip {
+  background: linear-gradient(180deg, rgba(34, 58, 96, 0.96), rgba(24, 44, 76, 0.94)) !important;
+  color: #eef4ff !important;
+  border: 1px solid rgba(120, 158, 220, 0.22) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 10px 24px rgba(3, 10, 24, 0.12) !important;
+}
+
+html:not([data-page="home"]) .checkout-option {
+  background: linear-gradient(180deg, rgba(35, 58, 94, 0.92), rgba(25, 45, 74, 0.90)) !important;
+  color: #eef4ff !important;
+  border: 1px solid rgba(120, 158, 220, 0.18) !important;
+}
+
+html:not([data-page="home"]) .checkout-option strong,
+html:not([data-page="home"]) .checkout-option p {
+  color: #eef4ff !important;
+}
+
+html:not([data-page="home"]) .store-quicklinks a {
+  background: linear-gradient(180deg, rgba(34, 58, 96, 0.96), rgba(24, 44, 76, 0.94)) !important;
+  color: #eef4ff !important;
+  border: 1px solid rgba(120, 158, 220, 0.22) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 10px 24px rgba(3, 10, 24, 0.12) !important;
+}
+
+html:not([data-page="home"]) .store-quicklinks a:hover {
+  background: linear-gradient(180deg, rgba(42, 68, 110, 0.98), rgba(30, 53, 88, 0.96)) !important;
+  border-color: rgba(143, 181, 240, 0.28) !important;
+}
+
+html:not([data-page="home"]) .button-secondary:hover,
+html:not([data-page="home"]) .filter-chip:hover,
+html:not([data-page="home"]) .track-chip:hover,
+html:not([data-page="home"]) .checkout-step:not(.is-active):hover {
+  background: linear-gradient(180deg, rgba(42, 68, 110, 0.98), rgba(30, 53, 88, 0.96)) !important;
+  border-color: rgba(143, 181, 240, 0.28) !important;
+}
+
+@media (max-width: 760px) {
+  html[data-page="about"] .section-player .player-shell,
+  html[data-page="about"] .section-player .player-copy,
+  html[data-page="about"] .section-player .player-ui {
+    justify-items: center;
+    text-align: center;
+  }
+
+  html[data-page="about"] .section-player .player-copy h2,
+  html[data-page="about"] .section-player #track-description {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  html[data-page="about"] .section-player .player-actions,
+  html[data-page="about"] .section-player .track-list {
+    justify-content: center;
+  }
+
+  html[data-page="about"] .section-player .player-screen {
+    text-align: center;
+  }
+
+  html:not([data-page="home"]) body {
+    background:
+      radial-gradient(circle at top left, rgba(82, 145, 255, 0.18), transparent 24%),
+      radial-gradient(circle at 82% 8%, rgba(120, 177, 255, 0.14), transparent 20%),
+      radial-gradient(circle at 50% 0%, rgba(52, 112, 224, 0.12), transparent 28%),
+      linear-gradient(180deg, #0b1830 0%, #0b1830 14%, #102442 34%, #15315a 100%);
+  }
+
+  html:not([data-page="home"]) .page-hero {
+    background:
+      linear-gradient(180deg, rgba(11, 24, 48, 0.92) 0%, rgba(16, 36, 66, 0.54) 38%, rgba(16, 36, 66, 0) 100%);
+  }
+
+  html:not([data-page="home"]) .menu-toggle {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    background-image: url("imgs/3barrinhas.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 20px 20px !important;
   }
 }
